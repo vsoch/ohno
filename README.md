@@ -29,7 +29,6 @@ tool to generate a contributors graphic below.
 
 ## TODO
 
- - add pretty docs
  - add tests
 
 ## License
