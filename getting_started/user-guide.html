@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guide &mdash; Ohno Python 0.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx-argparse.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ohno Python" href="../api_reference/ohno.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Ohno Python
+          </a>
+              <div class="version">
+                0.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#monitor">Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parse">Parse</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-usage">Python Usage</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference/ohno.html">Ohno Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference/internal/modules.html">Internal API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ohno Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+      <li>User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/getting_started/user-guide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="user-guide">
+<span id="getting-started-user-guide"></span><h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline"></a></h1>
+<p>Ohno is a command line client, wrapper, and Python module for giving you formatted error messages.
+If you have a question, find a bug, or want to request a feature!
+This is an open source project and we are eager for your contribution. 🎉️</p>
+<div class="section" id="usage">
+<span id="getting-started-user-guide-usage"></span><h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
+<p>Once you have <code class="docutils literal notranslate"><span class="pre">ohno</span></code> installed (<a class="reference internal" href="installation.html#getting-started-installation"><span class="std std-ref">Installation</span></a>) you
+can parse your errors fairly easily, either using ohno as a wrapper or post-run
+log parser.</p>
+<div class="section" id="monitor">
+<span id="getting-started-user-guide-usage-monitor"></span><h3>Monitor<a class="headerlink" href="#monitor" title="Permalink to this headline"></a></h3>
+<p>To monitor something that might error, you can do:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ohno monitor &lt;command&gt;
+</pre></div>
+</div>
+<p>We provide a set of failing scripts you can run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ohno monitor python examples/monitor/failure.py
+</pre></div>
+</div>
+<p>The output generated (by default) is markdown, and the intention is that you can open a GitHub issue
+with versions, system information, and the error message.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">### To Reproduce</span>
+
+<span class="sb">```bash</span>
+$ python examples/monitor/failure.py
+<span class="sb">```</span>
+
+<span class="gu">### Environment</span>
+
+<span class="k">-</span> Version: Python 3.8.8
+<span class="k">-</span> Host:
+  <span class="k">-</span> architecture: x86_64
+  <span class="k">-</span> python-compiler: GCC 7.3.0
+  <span class="k">-</span> python-version: 3.8.8
+  <span class="k">-</span> cpu-count: 8
+  <span class="k">-</span> system: Linux
+  <span class="k">-</span> libc: glibc@2.31
+
+<span class="gu">### Errors</span>
+
+<span class="sb">```bash</span>
+&gt;&gt; <span class="m">1</span>     error: We cannot <span class="k">do</span> that thing.     <span class="m">2</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parse">
+<h3>Parse<a class="headerlink" href="#parse" title="Permalink to this headline"></a></h3>
+<p>You can also parse an existing log.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ohno monitor python examples/parse/spack-failure.txt
+</pre></div>
+</div>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">### To Reproduce</span>
+
+<span class="sb">```bash</span>
+$ &lt;fill <span class="k">in</span> <span class="nb">command</span> here&gt;
+<span class="sb">```</span>
+
+<span class="gu">### Environment</span>
+
+
+<span class="k">-</span> Host:
+  <span class="k">-</span> architecture: x86_64
+  <span class="k">-</span> python-compiler: GCC 7.3.0
+  <span class="k">-</span> python-version: 3.8.8
+  <span class="k">-</span> cpu-count: 8
+  <span class="k">-</span> system: Linux
+  <span class="k">-</span> libc: glibc@2.31
+
+<span class="gu">### Errors</span>
+
+<span class="sb">```bash</span>
+&gt;&gt; <span class="m">2152</span>     configure: error: no BPatch.h found<span class="p">;</span> check path <span class="k">for</span> Dyninst packa
+&gt;&gt; <span class="m">2154</span>     configure: error: no tau_instrumentor found<span class="p">;</span> check path <span class="k">for</span> PDToo
+&gt;&gt; <span class="m">2178</span>     configure: error: MPI Correctness Checking support cannot be buil
+&gt;&gt; <span class="m">2186</span>     configure: error: no f2c.h found<span class="p">;</span> check path <span class="k">for</span> CLAPACK package
+&gt;&gt; <span class="m">2208</span>     configure: error: no jvmti.h found<span class="p">;</span> check path <span class="k">for</span> JVMTI package
+&gt;&gt; <span class="m">2238</span>     configure: error: no cuda.h found<span class="p">;</span> check path <span class="k">for</span> CUDA Toolkit <span class="k">fi</span>
+&gt;&gt; <span class="m">2242</span>     configure: error: no cuda_runtime_api.h found<span class="p">;</span> check path <span class="k">for</span> CUD
+&gt;&gt; <span class="m">2246</span>     configure: error: no cupti.h found<span class="p">;</span> check path <span class="k">for</span> CUPTI package
+&gt;&gt; <span class="m">2256</span>     configure: error: no ctool/ctool.h found<span class="p">;</span> check path <span class="k">for</span> CTool pa
+&gt;&gt; <span class="m">2293</span>     configure: error: no bmi.h found<span class="p">;</span> check path <span class="k">for</span> BMI package firs
+&gt;&gt; <span class="m">2393</span>     configure: error: no vtf3.h found<span class="p">;</span> check path <span class="k">for</span> VTF3 package <span class="k">fi</span>
+&gt;&gt; <span class="m">14683</span>    make<span class="o">[</span><span class="m">4</span><span class="o">]</span>: *** <span class="o">[</span>mpi_comm_spawn_multiple_f90.lo<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14694</span>    make<span class="o">[</span><span class="m">4</span><span class="o">]</span>: *** <span class="o">[</span>mpi_testall_f90.lo<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14696</span>    make<span class="o">[</span><span class="m">3</span><span class="o">]</span>: *** <span class="o">[</span>all-recursive<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14698</span>    make<span class="o">[</span><span class="m">2</span><span class="o">]</span>: *** <span class="o">[</span>all<span class="o">]</span> Error <span class="m">2</span>
+&gt;&gt; <span class="m">14700</span>    make<span class="o">[</span><span class="m">1</span><span class="o">]</span>: *** <span class="o">[</span>all-recursive<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14702</span>    make: *** <span class="o">[</span>all-recursive<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">2152</span>     configure: error: no BPatch.h found<span class="p">;</span> check path <span class="k">for</span> Dyninst packa
+&gt;&gt; <span class="m">2154</span>     configure: error: no tau_instrumentor found<span class="p">;</span> check path <span class="k">for</span> PDToo
+&gt;&gt; <span class="m">2178</span>     configure: error: MPI Correctness Checking support cannot be buil
+&gt;&gt; <span class="m">2186</span>     configure: error: no f2c.h found<span class="p">;</span> check path <span class="k">for</span> CLAPACK package
+&gt;&gt; <span class="m">2208</span>     configure: error: no jvmti.h found<span class="p">;</span> check path <span class="k">for</span> JVMTI package
+&gt;&gt; <span class="m">2238</span>     configure: error: no cuda.h found<span class="p">;</span> check path <span class="k">for</span> CUDA Toolkit <span class="k">fi</span>
+&gt;&gt; <span class="m">2242</span>     configure: error: no cuda_runtime_api.h found<span class="p">;</span> check path <span class="k">for</span> CUD
+&gt;&gt; <span class="m">2246</span>     configure: error: no cupti.h found<span class="p">;</span> check path <span class="k">for</span> CUPTI package
+&gt;&gt; <span class="m">2256</span>     configure: error: no ctool/ctool.h found<span class="p">;</span> check path <span class="k">for</span> CTool pa
+&gt;&gt; <span class="m">2293</span>     configure: error: no bmi.h found<span class="p">;</span> check path <span class="k">for</span> BMI package firs
+&gt;&gt; <span class="m">2393</span>     configure: error: no vtf3.h found<span class="p">;</span> check path <span class="k">for</span> VTF3 package <span class="k">fi</span>
+&gt;&gt; <span class="m">14686</span>    make<span class="o">[</span><span class="m">4</span><span class="o">]</span>: *** <span class="o">[</span>mpi_testsome_f90.lo<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14696</span>    make<span class="o">[</span><span class="m">4</span><span class="o">]</span>: *** <span class="o">[</span>mpi_testall_f90.lo<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14702</span>    make<span class="o">[</span><span class="m">3</span><span class="o">]</span>: *** <span class="o">[</span>all-recursive<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14704</span>    make<span class="o">[</span><span class="m">2</span><span class="o">]</span>: *** <span class="o">[</span>all<span class="o">]</span> Error <span class="m">2</span>
+&gt;&gt; <span class="m">14706</span>    make<span class="o">[</span><span class="m">1</span><span class="o">]</span>: *** <span class="o">[</span>all-recursive<span class="o">]</span> Error <span class="m">1</span>
+&gt;&gt; <span class="m">14708</span>    make: *** <span class="o">[</span>all-recursive<span class="o">]</span> Error <span class="m">1</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p>The view you see above are the lines extracted that are determined to have meaningful content.</p>
+</div>
+</div>
+<div class="section" id="python-usage">
+<h2>Python Usage<a class="headerlink" href="#python-usage" title="Permalink to this headline"></a></h2>
+<p>If you are working in Python, the same interactions can be done programatically.
+Here is how to monitor a command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ohno.main.client</span> <span class="k">as</span> <span class="nn">client</span>
+<span class="n">monitor</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Monitor</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;monitor/failure.py&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">parse</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>You can explore the results object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">errors</span>
+<span class="n">res</span><span class="o">.</span><span class="n">warnings</span>
+<span class="n">res</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And the original command is now a known task to the monitor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">monitor</span><span class="o">.</span><span class="n">tasks</span>
+<span class="p">{</span><span class="s1">&#39;python monitor/failure.py&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">ohno</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">ShellExecutor</span> <span class="n">at</span> <span class="mh">0x7fd5541cce50</span><span class="o">&gt;</span><span class="p">}</span>
+<span class="n">A</span> <span class="n">task</span> <span class="ow">is</span> <span class="n">parsed</span> <span class="n">by</span> <span class="n">a</span> <span class="n">particular</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">result</span> <span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="n">you</span> <span class="n">are</span> <span class="n">interested</span> <span class="ow">in</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>To do the same but for an error log already generated:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ohno.main.client</span> <span class="k">as</span> <span class="nn">client</span>
+<span class="n">monitor</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Monitor</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">monitor</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;parse/spack-error.txt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">parse</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>This library is under development and we will have more documentation coming soon!</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api_reference/ohno.html" class="btn btn-neutral float-right" title="Ohno Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Vanessa Sochat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ohno package &mdash; Ohno Python 0.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sphinx-argparse.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Internal API" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Ohno Python
+          </a>
+              <div class="version">
+                0.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/user-guide.html">User Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../ohno.html">Ohno Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Internal API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ohno package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.exceptions">ohno.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.version">ohno.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.logger">ohno.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.utils">ohno.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.utils.fileio">ohno.utils.fileio module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.utils.terminal">ohno.utils.terminal module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.main">ohno.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.main.client">ohno.main.client module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.main.result">ohno.main.result module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.main.executor">ohno.main.executor module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.main.executor.base">ohno.main.executor.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.main.executor.shell">ohno.main.executor.shell module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ohno.client">ohno.client module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ohno Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Internal API</a> &raquo;</li>
+      <li>ohno package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api_reference/internal/ohno.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ohno-package">
+<h1>ohno package<a class="headerlink" href="#ohno-package" title="Permalink to this headline"></a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-ohno.exceptions">
+<span id="ohno-exceptions-module"></span><h2>ohno.exceptions module<a class="headerlink" href="#module-ohno.exceptions" title="Permalink to this headline"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="ohno.exceptions.DirectoryNotFoundError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.exceptions.</span></code><code class="sig-name descname"><span class="pre">DirectoryNotFoundError</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">dirname</span></span></em>, <em><span class="n"><span class="pre">reason</span></span></em>, <em><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/exceptions.html#DirectoryNotFoundError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.exceptions.DirectoryNotFoundError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></p>
+<p>Thrown if a directory is not found</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ohno.exceptions.MissingEnvironmentVariable">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.exceptions.</span></code><code class="sig-name descname"><span class="pre">MissingEnvironmentVariable</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">varname</span></span></em>, <em><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/exceptions.html#MissingEnvironmentVariable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.exceptions.MissingEnvironmentVariable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
+<p>Thrown if a required environment variable is not provided.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ohno.exceptions.MissingImportError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.exceptions.</span></code><code class="sig-name descname"><span class="pre">MissingImportError</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">name</span></span></em>, <em><span class="n"><span class="pre">reason</span></span></em>, <em><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/exceptions.html#MissingImportError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.exceptions.MissingImportError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ImportError</span></code></p>
+<p>Thrown if a library is missing.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ohno.exceptions.NotSupportedError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.exceptions.</span></code><code class="sig-name descname"><span class="pre">NotSupportedError</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">reason</span></span></em>, <em><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/exceptions.html#NotSupportedError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.exceptions.NotSupportedError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NotImplementedError</span></code></p>
+<p>Thrown if functionality isn’t supported, and not implemented.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ohno.exceptions.OutputParsingError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.exceptions.</span></code><code class="sig-name descname"><span class="pre">OutputParsingError</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/exceptions.html#OutputParsingError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.exceptions.OutputParsingError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></p>
+<p>Thrown if an output cannot be correctly parsed</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ohno.exceptions.UnrecognizedTargetError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.exceptions.</span></code><code class="sig-name descname"><span class="pre">UnrecognizedTargetError</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">name</span></span></em>, <em><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/exceptions.html#UnrecognizedTargetError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.exceptions.UnrecognizedTargetError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></p>
+<p>Thrown if an unrecognized target is given for an action</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.version">
+<span id="ohno-version-module"></span><h2>ohno.version module<a class="headerlink" href="#module-ohno.version" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-ohno.logger">
+<span id="ohno-logger-module"></span><h2>ohno.logger module<a class="headerlink" href="#module-ohno.logger" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.logger.</span></code><code class="sig-name descname"><span class="pre">ColorizingStreamHandler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">nocolor=False</span></span></em>, <em><span class="n"><span class="pre">stream=&lt;_io.TextIOWrapper</span> <span class="pre">name='&lt;stderr&gt;'</span> <span class="pre">mode='w'</span> <span class="pre">encoding='utf-8'&gt;</span></span></em>, <em><span class="n"><span class="pre">use_threads=False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#ColorizingStreamHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.StreamHandler</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.BLACK">
+<code class="sig-name descname"><span class="pre">BLACK</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.BLACK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.BLUE">
+<code class="sig-name descname"><span class="pre">BLUE</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.BLUE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.BOLD_SEQ">
+<code class="sig-name descname"><span class="pre">BOLD_SEQ</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[1m'</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.BOLD_SEQ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.COLOR_SEQ">
+<code class="sig-name descname"><span class="pre">COLOR_SEQ</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[%dm'</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.COLOR_SEQ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.CYAN">
+<code class="sig-name descname"><span class="pre">CYAN</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.CYAN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.GREEN">
+<code class="sig-name descname"><span class="pre">GREEN</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.GREEN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.MAGENTA">
+<code class="sig-name descname"><span class="pre">MAGENTA</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.MAGENTA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.RED">
+<code class="sig-name descname"><span class="pre">RED</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.RED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.RESET_SEQ">
+<code class="sig-name descname"><span class="pre">RESET_SEQ</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\x1b[0m'</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.RESET_SEQ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.WHITE">
+<code class="sig-name descname"><span class="pre">WHITE</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.WHITE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.YELLOW">
+<code class="sig-name descname"><span class="pre">YELLOW</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.YELLOW" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.can_color_tty">
+<code class="sig-name descname"><span class="pre">can_color_tty</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#ColorizingStreamHandler.can_color_tty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.can_color_tty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.colors">
+<code class="sig-name descname"><span class="pre">colors</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'CRITICAL':</span> <span class="pre">1,</span> <span class="pre">'DEBUG':</span> <span class="pre">4,</span> <span class="pre">'ERROR':</span> <span class="pre">1,</span> <span class="pre">'INFO':</span> <span class="pre">2,</span> <span class="pre">'WARNING':</span> <span class="pre">3}</span></em><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.colors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.decorate">
+<code class="sig-name descname"><span class="pre">decorate</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#ColorizingStreamHandler.decorate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.decorate" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.emit">
+<code class="sig-name descname"><span class="pre">emit</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#ColorizingStreamHandler.emit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.emit" title="Permalink to this definition"></a></dt>
+<dd><p>Emit a record.</p>
+<p>If a formatter is specified, it is used to format the record.
+The record is then written to the stream with a trailing newline.  If
+exception information is present, it is formatted using
+traceback.print_exception and appended to the stream.  If the stream
+has an ‘encoding’ attribute, it is used to determine how to do the
+output to the stream.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ohno.logger.ColorizingStreamHandler.is_tty">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">is_tty</span></code><a class="headerlink" href="#ohno.logger.ColorizingStreamHandler.is_tty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.logger.Logger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.logger.</span></code><code class="sig-name descname"><span class="pre">Logger</span></code><a class="reference internal" href="../../_modules/ohno/logger.html#Logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.cleanup">
+<code class="sig-name descname"><span class="pre">cleanup</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.cleanup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.cleanup" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.debug">
+<code class="sig-name descname"><span class="pre">debug</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.debug"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.error">
+<code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.exit">
+<code class="sig-name descname"><span class="pre">exit</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em>, <em><span class="n"><span class="pre">return_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.exit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.handler">
+<code class="sig-name descname"><span class="pre">handler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.handler" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.info">
+<code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.location">
+<code class="sig-name descname"><span class="pre">location</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.location" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.progress">
+<code class="sig-name descname"><span class="pre">progress</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">done</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">total</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.progress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.progress" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.set_level">
+<code class="sig-name descname"><span class="pre">set_level</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.set_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.set_level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.set_stream_handler">
+<code class="sig-name descname"><span class="pre">set_stream_handler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">stream_handler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.set_stream_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.set_stream_handler" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.shellcmd">
+<code class="sig-name descname"><span class="pre">shellcmd</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.shellcmd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.shellcmd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.text_handler">
+<code class="sig-name descname"><span class="pre">text_handler</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.text_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.text_handler" title="Permalink to this definition"></a></dt>
+<dd><p>The default snakemake log handler.
+Prints the output to the console.
+:param msg: the log message dictionary
+:type msg: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.logger.Logger.warning">
+<code class="sig-name descname"><span class="pre">warning</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#Logger.warning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.Logger.warning" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.logger.setup_logger">
+<code class="sig-prename descclassname"><span class="pre">ohno.logger.</span></code><code class="sig-name descname"><span class="pre">setup_logger</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">printshellcmds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">nocolor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">use_threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">wms_monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/logger.html#setup_logger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.logger.setup_logger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ohno.utils">
+<span id="ohno-utils-module"></span><h2>ohno.utils module<a class="headerlink" href="#module-ohno.utils" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-ohno.utils.fileio">
+<span id="ohno-utils-fileio-module"></span><h2>ohno.utils.fileio module<a class="headerlink" href="#module-ohno.utils.fileio" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.can_be_deleted">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">can_be_deleted</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">path</span></span></em>, <em><span class="n"><span class="pre">ignore_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#can_be_deleted"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.can_be_deleted" title="Permalink to this definition"></a></dt>
+<dd><p>A path can be deleted if it contains no entries, <em>or</em>
+if the only files are in ignore_files</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.copyfile">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">copyfile</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">source</span></span></em>, <em><span class="n"><span class="pre">destination</span></span></em>, <em><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#copyfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.copyfile" title="Permalink to this definition"></a></dt>
+<dd><p>Copy a file from a source to its destination.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.creation_date">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">creation_date</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#creation_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.creation_date" title="Permalink to this definition"></a></dt>
+<dd><p>Get the creation date, and fallback to modified date.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.get_file_hash">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">get_file_hash</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">image_path</span></span></em>, <em><span class="n"><span class="pre">algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sha256'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#get_file_hash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.get_file_hash" title="Permalink to this definition"></a></dt>
+<dd><p>Return an sha256 hash of the file based on a criteria level.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.get_tmpdir">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">get_tmpdir</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">tmpdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#get_tmpdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.get_tmpdir" title="Permalink to this definition"></a></dt>
+<dd><p>Get a temporary directory for an operation.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.get_tmpfile">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">get_tmpfile</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">tmpdir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#get_tmpfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.get_tmpfile" title="Permalink to this definition"></a></dt>
+<dd><p>Get a temporary file with an optional prefix.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.mkdir_p">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">mkdir_p</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#mkdir_p"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.mkdir_p" title="Permalink to this definition"></a></dt>
+<dd><p>mkdir_p attempts to get the same functionality as mkdir -p
+:param path: the path to create.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.mkdirp">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">mkdirp</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">dirnames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#mkdirp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.mkdirp" title="Permalink to this definition"></a></dt>
+<dd><p>Create one or more directories</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.print_json">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">print_json</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">json_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#print_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.print_json" title="Permalink to this definition"></a></dt>
+<dd><p>Print json pretty</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.read_file">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">read_file</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#read_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.read_file" title="Permalink to this definition"></a></dt>
+<dd><p>Read a file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.read_json">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">read_json</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'r'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#read_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.read_json" title="Permalink to this definition"></a></dt>
+<dd><p>Read a json file to a dictionary.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.recursive_find">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">recursive_find</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">base</span></span></em>, <em><span class="n"><span class="pre">pattern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#recursive_find"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.recursive_find" title="Permalink to this definition"></a></dt>
+<dd><p>Find filenames that match a particular pattern, and yield them.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.rmdir_to_base">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">rmdir_to_base</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">path</span></span></em>, <em><span class="n"><span class="pre">base_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#rmdir_to_base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.rmdir_to_base" title="Permalink to this definition"></a></dt>
+<dd><p>Delete the tree under $path and all the parents
+up to $base_path as long as they are empty</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.write_file">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">write_file</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">content</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em>, <em><span class="n"><span class="pre">exec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#write_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.write_file" title="Permalink to this definition"></a></dt>
+<dd><p>Write content to a filename</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.fileio.write_json">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.fileio.</span></code><code class="sig-name descname"><span class="pre">write_json</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">json_obj</span></span></em>, <em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'w'</span></span></em>, <em><span class="n"><span class="pre">print_pretty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/fileio.html#write_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.fileio.write_json" title="Permalink to this definition"></a></dt>
+<dd><p>Write json to a filename</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.utils.terminal">
+<span id="ohno-utils-terminal-module"></span><h2>ohno.utils.terminal module<a class="headerlink" href="#module-ohno.utils.terminal" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.check_install">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">check_install</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">software</span></span></em>, <em><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'--version'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#check_install"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.check_install" title="Permalink to this definition"></a></dt>
+<dd><p>check_install will attempt to run the singularity command, and
+return True if installed. The command line utils will not run
+without this check.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>software</strong> (<em>the software to check if installed</em>) – </li>
+<li><strong>quiet</strong> (<em>should we be quiet?</em><em> (</em><em>default True</em><em>)</em>) – </li>
+<li><strong>command</strong> (<em>the command to use to check</em><em> (</em><em>defaults to --version</em><em>)</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.confirm_action">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">confirm_action</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">question</span></span></em>, <em><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#confirm_action"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.confirm_action" title="Permalink to this definition"></a></dt>
+<dd><p>confirm if the user wants to perform a certain action</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>question</strong> (<em>the question that will be asked</em>) – </li>
+<li><strong>force</strong> (<em>if the user wants to skip the prompt</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.confirm_uninstall">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">confirm_uninstall</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">filename</span></span></em>, <em><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#confirm_uninstall"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.confirm_uninstall" title="Permalink to this definition"></a></dt>
+<dd><p>confirm if the user wants to uninstall a module</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>the file that will be removed</em>) – </li>
+<li><strong>force</strong> (<em>if the user wants to skip the prompt</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.get_installdir">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">get_installdir</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#get_installdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.get_installdir" title="Permalink to this definition"></a></dt>
+<dd><p>get_installdir returns the installation directory of the application</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.get_user">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">get_user</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#get_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.get_user" title="Permalink to this definition"></a></dt>
+<dd><p>Get the name of the user. We first try to import pwd, but fallback to
+extraction from the environment.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.get_userhome">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">get_userhome</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#get_userhome"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.get_userhome" title="Permalink to this definition"></a></dt>
+<dd><p>get the user home based on the effective uid. If import of pwd fails
+(not supported for Windows) then fall back to environment variable.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.run_command">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">run_command</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span></em>, <em><span class="n"><span class="pre">sudo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#run_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.run_command" title="Permalink to this definition"></a></dt>
+<dd><p>run_command uses subprocess to send a command to the terminal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cmd</strong> (<em>the command to send</em><em>, </em><em>should be a list for subprocess</em>) – </li>
+<li><strong>error_message</strong> (<em>the error message to give to user if fails</em><em>,</em>) – </li>
+<li><strong>failed.</strong> (<em>if none specified</em><em>, </em><em>will alert that command</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.utils.terminal.which">
+<code class="sig-prename descclassname"><span class="pre">ohno.utils.terminal.</span></code><code class="sig-name descname"><span class="pre">which</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">software</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">strip_newline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/utils/terminal.html#which"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.utils.terminal.which" title="Permalink to this definition"></a></dt>
+<dd><p>get_install will return the path to where Singularity (or another
+executable) is installed.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.main">
+<span id="ohno-main-module"></span><h2>ohno.main module<a class="headerlink" href="#module-ohno.main" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-ohno.main.client">
+<span id="ohno-main-client-module"></span><h2>ohno.main.client module<a class="headerlink" href="#module-ohno.main.client" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.main.client.Monitor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.main.client.</span></code><code class="sig-name descname"><span class="pre">Monitor</span></code><a class="reference internal" href="../../_modules/ohno/main/client.html#Monitor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.client.Monitor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Monitor a running process, collecting the output and parsing for errors.</p>
+<p>We also parse those errors and return to the user in a useful format for
+submitting a bug report.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.client.Monitor.load">
+<code class="sig-name descname"><span class="pre">load</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">logfile</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/client.html#Monitor.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.client.Monitor.load" title="Permalink to this definition"></a></dt>
+<dd><p>Parse a logfile and return the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.client.Monitor.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">command</span></span></em>, <em><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/client.html#Monitor.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.client.Monitor.run" title="Permalink to this definition"></a></dt>
+<dd><p>Given a command, run it and capture (and parse) errors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.main.result">
+<span id="ohno-main-result-module"></span><h2>ohno.main.result module<a class="headerlink" href="#module-ohno.main.result" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.main.result.MarkdownResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.main.result.</span></code><code class="sig-name descname"><span class="pre">MarkdownResult</span></code><span class="sig-paren">(</span><em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/result.html#MarkdownResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.result.MarkdownResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ohno.main.result.Result" title="ohno.main.result.Result"><code class="xref py py-class docutils literal notranslate"><span class="pre">ohno.main.result.Result</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.result.MarkdownResult.parse">
+<code class="sig-name descname"><span class="pre">parse</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/result.html#MarkdownResult.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.result.MarkdownResult.parse" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.main.result.Result">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.main.result.</span></code><code class="sig-name descname"><span class="pre">Result</span></code><span class="sig-paren">(</span><em><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/result.html#Result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.result.Result" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A base result handles parsing a command run.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ohno.main.result.Result.command">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">command</span></code><a class="headerlink" href="#ohno.main.result.Result.command" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.result.Result.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/result.html#Result.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.result.Result.to_dict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.main.executor">
+<span id="ohno-main-executor-module"></span><h2>ohno.main.executor module<a class="headerlink" href="#module-ohno.main.executor" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="module-ohno.main.executor.base">
+<span id="ohno-main-executor-base-module"></span><h2>ohno.main.executor.base module<a class="headerlink" href="#module-ohno.main.executor.base" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.main.executor.base.Capturing">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.main.executor.base.</span></code><code class="sig-name descname"><span class="pre">Capturing</span></code><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#Capturing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.Capturing" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>capture output from stdout and stderr into capture object.
+This is based off of github.com/vsoch/gridtest but modified
+to write files. The stderr and stdout are set to temporary files at
+the init of the capture, and then they are closed when we exit. This
+means expected usage looks like:</p>
+<dl class="docutils">
+<dt>with Capturing() as capture:</dt><dd>process = subprocess.Popen(…)</dd>
+</dl>
+<p>And then the output and error are retrieved from reading the files:
+and exposed as properties to the client:</p>
+<blockquote>
+<div>capture.out
+capture.err</div></blockquote>
+<p>And cleanup means deleting these files, if they exist.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.Capturing.cleanup">
+<code class="sig-name descname"><span class="pre">cleanup</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#Capturing.cleanup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.Capturing.cleanup" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ohno.main.executor.base.Capturing.err">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">err</span></code><a class="headerlink" href="#ohno.main.executor.base.Capturing.err" title="Permalink to this definition"></a></dt>
+<dd><p>Return error stream. Returns empty string if empty or doesn’t exist.
+Returns (str) : error stream written to file</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ohno.main.executor.base.Capturing.out">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">out</span></code><a class="headerlink" href="#ohno.main.executor.base.Capturing.out" title="Permalink to this definition"></a></dt>
+<dd><p>Return output stream. Returns empty string if empty or doesn’t exist.
+Returns (str) : output stream written to file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.Capturing.set_stderr">
+<code class="sig-name descname"><span class="pre">set_stderr</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#Capturing.set_stderr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.Capturing.set_stderr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.Capturing.set_stdout">
+<code class="sig-name descname"><span class="pre">set_stdout</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#Capturing.set_stdout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.Capturing.set_stdout" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.main.executor.base.</span></code><code class="sig-name descname"><span class="pre">ExecutorBase</span></code><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.capture">
+<code class="sig-name descname"><span class="pre">capture</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.capture"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.capture" title="Permalink to this definition"></a></dt>
+<dd><p>capture is a helper function to capture a shell command. We
+use Capturing and then save attributes like the pid, output, error
+to it, and return to the calling function. For example:</p>
+<p>capture = self.capture_command(cmd)
+self.pid = capture.pid
+self.returncode = capture.returncode
+self.out = capture.output
+self.err = capture.error</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.command">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">command</span></code><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.command" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.execute" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.export">
+<code class="sig-name descname"><span class="pre">export</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.export" title="Permalink to this definition"></a></dt>
+<dd><p>return data as json. This is intended to save to the task database.
+Any important executor specific metadata should be added to self.data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.get_error">
+<code class="sig-name descname"><span class="pre">get_error</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.get_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.get_error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.get_output">
+<code class="sig-name descname"><span class="pre">get_output</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.get_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.get_output" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'base'</span></em><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.summary">
+<code class="sig-name descname"><span class="pre">summary</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.summary" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.main.executor.shell">
+<span id="ohno-main-executor-shell-module"></span><h2>ohno.main.executor.shell module<a class="headerlink" href="#module-ohno.main.executor.shell" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><code class="sig-prename descclassname"><span class="pre">ohno.main.executor.shell.</span></code><code class="sig-name descname"><span class="pre">ShellExecutor</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ohno.main.executor.base.ExecutorBase" title="ohno.main.executor.base.ExecutorBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ohno.main.executor.base.ExecutorBase</span></code></a></p>
+<p>Run a shell command and capture output.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.command">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">command</span></code><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.command" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.decode">
+<code class="sig-name descname"><span class="pre">decode</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.decode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.decode" title="Permalink to this definition"></a></dt>
+<dd><p>Given a line of output (error or regular) decode using the
+system default, if appropriate</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a system command and return output and error.</p>
+<p>Execute
+should take a cmd (a string or list) and execute it according to
+the executor. Attributes should be set on the class that are
+added to self.export. Since the functions here are likely needed
+by most executors, we create a self._execute() class that is called
+instead, and can be used by the other executors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.get_error">
+<code class="sig-name descname"><span class="pre">get_error</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.get_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.get_error" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the error from shell command</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.get_output">
+<code class="sig-name descname"><span class="pre">get_output</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.get_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.get_output" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the output from shell command</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'shell'</span></em><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.reset">
+<code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.reset" title="Permalink to this definition"></a></dt>
+<dd><p>refresh output and error streams</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.set_command">
+<code class="sig-name descname"><span class="pre">set_command</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.set_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.set_command" title="Permalink to this definition"></a></dt>
+<dd><p>Parse a newly provided command.</p>
+<p>parse is called when a new command is provided to ensure we have
+a list. We don’t check that the executable is on the path,
+as the initialization might not occur in the runtime environment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.summary">
+<code class="sig-name descname"><span class="pre">summary</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.summary" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ohno.client">
+<span id="ohno-client-module"></span><h2>ohno.client module<a class="headerlink" href="#module-ohno.client" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.client.get_parser">
+<code class="sig-prename descclassname"><span class="pre">ohno.client.</span></code><code class="sig-name descname"><span class="pre">get_parser</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/client.html#get_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.client.get_parser" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ohno.client.main">
+<code class="sig-prename descclassname"><span class="pre">ohno.client.</span></code><code class="sig-name descname"><span class="pre">main</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/client.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.client.main" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Internal API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Vanessa Sochat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
