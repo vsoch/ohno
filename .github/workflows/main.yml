@@ -21,7 +21,7 @@ jobs:
           export PATH="/usr/share/miniconda/bin:$PATH"
           source activate black
           pip install black
-          black --check usrse
+          black --check ohno
           
       - name: Check imports with pyflakes
         run: |
