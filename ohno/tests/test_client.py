@@ -57,17 +57,8 @@ def test_parse():
     assert not res.warnings
     dumped = res.to_dict()
     for key in [
-        "pwd",
-        "user",
         "timestamp",
-        "version",
-        "host",
-        "output",
         "error",
-        "returncode",
-        "pid",
-        "cmd",
-        "status",
         "command",
         "errors",
         "warnings",
