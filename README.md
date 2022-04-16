@@ -6,8 +6,6 @@
 
 Ohno is a command line client, wrapper, and Python module for giving you formatted error messages.
 
-**under development**
-
 ## Contributors
 
 We use the [all-contributors](https://github.com/all-contributors/all-contributors) 
