@@ -40,5 +40,5 @@ jobs:
         run: |
           export PATH="/usr/share/miniconda/bin:$PATH"
           source activate black
-          pip install -e .
+          pip install -e .[all]
           pytest -xs ohno/tests/test*.py
