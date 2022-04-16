@@ -1,6 +1,6 @@
 FROM ubuntu
 
-# docker build -t riverapi .
+# docker build -t ohno .
 
 LABEL MAINTAINER @vsoch
 ENV PATH /opt/conda/bin:${PATH}
