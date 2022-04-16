@@ -75,7 +75,7 @@ You can also parse an existing log.
 
 .. code-block:: console
 
-    $ ohno monitor python examples/parse/spack-failure.txt
+    $ ohno parse examples/parse/spack-error.txt
 
 
 .. code-block:: markdown
