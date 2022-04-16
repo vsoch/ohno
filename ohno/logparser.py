@@ -73,8 +73,7 @@ import math
 import multiprocessing
 import time
 from contextlib import contextmanager
-
-from six import StringIO
+from io import StringIO
 
 
 def parse_output_entry(entry):
@@ -316,16 +315,22 @@ class LogEvent:
 
     @property
     def start(self):
-        """First line in the log with text for the event or its context."""
+        """
+        First line in the log with text for the event or its context.
+        """
         return self.line_no - len(self.pre_context)
 
     @property
     def end(self):
-        """Last line in the log with text for event or its context."""
+        """
+        Last line in the log with text for event or its context.
+        """
         return self.line_no + len(self.post_context) + 1
 
     def __getitem__(self, line_no):
-        """Index event text and context by actual line number in file."""
+        """
+        Index event text and context by actual line number in file.
+        """
         if line_no == self.line_no:
             return self.text
         elif line_no < self.line_no:
@@ -334,7 +339,9 @@ class LogEvent:
             return self.post_context[line_no - self.line_no - 1]
 
     def __str__(self):
-        """Returns event lines and context."""
+        """
+        Returns event lines and context.
+        """
         out = StringIO()
         for i in range(self.start, self.end):
             if i == self.line_no:
@@ -345,15 +352,21 @@ class LogEvent:
 
 
 class BuildError(LogEvent):
-    """LogEvent subclass for build errors."""
+    """
+    LogEvent subclass for build errors.
+    """
 
 
 class BuildWarning(LogEvent):
-    """LogEvent subclass for build warnings."""
+    """
+    LogEvent subclass for build warnings.
+    """
 
 
 def chunks(l, n):
-    """Divide l into n approximately-even chunks."""
+    """
+    Divide l into n approximately-even chunks.
+    """
     chunksize = int(math.ceil(len(l) / n))
     return [l[i : i + chunksize] for i in range(0, len(l), chunksize)]
 
@@ -367,7 +380,9 @@ def _time(times, i):
 
 
 def _match(matches, exceptions, line):
-    """True if line matches a regex in matches and none in exceptions."""
+    """
+    True if line matches a regex in matches and none in exceptions.
+    """
     return any(m.search(line) for m in matches) and not any(
         e.search(line) for e in exceptions
     )
@@ -446,7 +461,9 @@ def _parse_unpack(args):
 
 
 class CTestLogParser(object):
-    """Log file parser that extracts errors and warnings."""
+    """
+    Log file parser that extracts errors and warnings.
+    """
 
     def __init__(self, profile=False):
         # whether to record timing information
@@ -454,7 +471,9 @@ class CTestLogParser(object):
         self.profile = profile
 
     def print_timings(self):
-        """Print out profile of time spent in different regular expressions."""
+        """
+        Print out profile of time spent in different regular expressions.
+        """
 
         def stringify(elt):
             return elt if isinstance(elt, str) else elt.pattern
@@ -476,7 +495,8 @@ class CTestLogParser(object):
             index += 1
 
     def parse(self, stream, context=6, jobs=None):
-        """Parse a log text by searching each line for errors and warnings.
+        """
+        Parse a log text by searching each line for errors and warnings.
 
         This is modified from the spack version to get as input a string.
         Args:
