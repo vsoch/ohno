@@ -2,7 +2,6 @@ __author__ = "Vanessa Sochat"
 __copyright__ = "Copyright 2022, Vanessa Sochat"
 __license__ = "MPL 2.0"
 
-import locale
 import shlex
 import shutil
 
@@ -107,18 +106,6 @@ class ShellExecutor(ExecutorBase):
         self.data["error"] = capture.error
         self.data["status"] = "complete"
         return self.data["output"], self.data["error"]
-
-    def decode(self, line):
-        """Given a line of output (error or regular) decode using the
-        system default, if appropriate
-        """
-        loc = locale.getdefaultlocale()[1]
-
-        try:
-            line = line.decode(loc)
-        except:
-            pass
-        return line
 
     def get_output(self):
         """

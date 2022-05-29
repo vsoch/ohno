@@ -7,6 +7,7 @@ from ohno.logger import logger
 
 from datetime import datetime
 import os
+import locale
 import tempfile
 import subprocess
 import shutil
@@ -180,6 +181,19 @@ class ExecutorBase:
         capture.cleanup()
         capture.returncode = returncode
         return capture
+
+    def decode(self, line):
+        """
+        Given a line of output (error or regular) decode using the
+        system default, if appropriate
+        """
+        loc = locale.getdefaultlocale()[1]
+
+        try:
+            line = line.decode(loc)
+        except:
+            pass
+        return line
 
     def summary(self):
         return "[%s]" % self.name
