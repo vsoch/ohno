@@ -14,5 +14,6 @@ and **Merged pull requests**. Critical items to know are:
 The versions coincide with releases on pip. Only major versions will be released as tags on Github.
 
 ## [0.0.x](https://github.com/vsoch/ohno/tree/main) (0.0.x)
+ - ensuring base class has decode (0.0.11)
  - first release with monitor and parse (0.0.1)
  - skeleton release (0.0.0)
