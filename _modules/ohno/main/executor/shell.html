@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ohno.main.executor.shell &mdash; Ohno Python 0.0.1 documentation</title>
+  <title>ohno.main.executor.shell &mdash; Ohno Python 0.0.11 documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/sphinx-argparse.css" type="text/css" />
@@ -30,7 +30,7 @@
             <a href="../../../../index.html" class="icon icon-home"> Ohno Python
           </a>
               <div class="version">
-                0.0.1
+                0.0.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
@@ -80,7 +80,6 @@
 <span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright 2022, Vanessa Sochat&quot;</span>
 <span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;MPL 2.0&quot;</span>
 
-<span class="kn">import</span> <span class="nn">locale</span>
 <span class="kn">import</span> <span class="nn">shlex</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
 
@@ -185,18 +184,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">capture</span><span class="o">.</span><span class="n">error</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;complete&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;output&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span>
-
-<div class="viewcode-block" id="ShellExecutor.decode"><a class="viewcode-back" href="../../../../api_reference/internal/ohno.html#ohno.main.executor.shell.ShellExecutor.decode">[docs]</a>    <span class="k">def</span> <span class="nf">decode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Given a line of output (error or regular) decode using the</span>
-<span class="sd">        system default, if appropriate</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">loc</span> <span class="o">=</span> <span class="n">locale</span><span class="o">.</span><span class="n">getdefaultlocale</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
-
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="k">pass</span>
-        <span class="k">return</span> <span class="n">line</span></div>
 
 <div class="viewcode-block" id="ShellExecutor.get_output"><a class="viewcode-back" href="../../../../api_reference/internal/ohno.html#ohno.main.executor.shell.ShellExecutor.get_output">[docs]</a>    <span class="k">def</span> <span class="nf">get_output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>

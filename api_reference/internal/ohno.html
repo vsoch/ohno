@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ohno package &mdash; Ohno Python 0.0.1 documentation</title>
+  <title>ohno package &mdash; Ohno Python 0.0.11 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/sphinx-argparse.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="../../index.html" class="icon icon-home"> Ohno Python
           </a>
               <div class="version">
-                0.0.1
+                0.0.11
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -665,6 +665,13 @@ self.err = capture.error</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.decode">
+<code class="sig-name descname"><span class="pre">decode</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.decode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.decode" title="Permalink to this definition"></a></dt>
+<dd><p>Given a line of output (error or regular) decode using the
+system default, if appropriate</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ohno.main.executor.base.ExecutorBase.execute">
 <code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">cmd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/base.html#ExecutorBase.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.base.ExecutorBase.execute" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -710,13 +717,6 @@ Any important executor specific metadata should be added to self.data</p>
 <dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.command">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><code class="sig-name descname"><span class="pre">command</span></code><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.command" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.decode">
-<code class="sig-name descname"><span class="pre">decode</span></code><span class="sig-paren">(</span><em><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ohno/main/executor/shell.html#ShellExecutor.decode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ohno.main.executor.shell.ShellExecutor.decode" title="Permalink to this definition"></a></dt>
-<dd><p>Given a line of output (error or regular) decode using the
-system default, if appropriate</p>
-</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ohno.main.executor.shell.ShellExecutor.execute">
